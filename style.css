@@ -1,0 +1,10 @@
+* {
+    margin-top: 2vh;
+}
+
+.center{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
