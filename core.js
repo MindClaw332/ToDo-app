@@ -43,7 +43,7 @@ function DrawList() {
         outputs.innerHTML += `
         <fieldset role="group">
             <li class = ""><p>${i + 1}. ${posts[i].toDoText}<p>
-             <button onclick = "DeletePost(${i})">delete</button>
+             <button class ="outline" onclick = "DeletePost(${i})">delete</button>
             </li>
         </fieldset>
         `
