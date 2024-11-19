@@ -9,11 +9,14 @@ const addButton = document.getElementById("addbutton");
 const input = document.getElementById("textinput");
 const clearButton = document.getElementById("clearbutton");
 let posts;
+
+
 function AddPost() {
     console.log("clicked")
     console.log(posts, ' posts na parse')
     const post = {
         toDoText: GetTodo()
+
     }
     posts.push(post);
     console.log(posts);
@@ -39,8 +42,7 @@ function GetTodo() {
 function DrawList() {
     outputs.innerHTML = '';
     for (i = 0; i < posts.length; i++) {
-
-        outputs.innerHTML += `
+    outputs.innerHTML += `
         <fieldset role="group">
             <li class = ""><p>${i + 1}. ${posts[i].toDoText}<p>
              <button class ="outline" onclick = "DeletePost(${i})">delete</button>
@@ -67,6 +69,7 @@ function DeletePost(id){
     localStorage.setItem("stored posts", JSON.stringify(posts));
     DrawList();
 }
+
 //localStorage.clear();
 InitializeLocalStorage();
 DrawList();
